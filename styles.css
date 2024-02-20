@@ -1,15 +1,46 @@
+:root.dark{
+    --color-base-bg: #0c5165;
+    --color-base-text: black;
+    --color-form: #608C98;
+    --color-b-ul: darkgray;
+    --color-: lightgray;
+    --color-btn-trash: red;
+    --color-btn-check: green;
+}
+:root.light{
+    --color-base-bg: #fdf6db;
+    --color-base-text: black;
+    --color-form: #DDD8C4;
+    --color-b-ul: darkgray;
+    --color-: lightgray;
+    --color-btn-trash: red;
+    --color-btn-check: green;
+}
+
+button{
+    color: var(--color-base-text);
+    background-color: var(--color-btn-bg);
+    border: solid var(--color-base-bg) 0.5px;
+    width: 100%;
+    border-radius: 5px;
+    height: 70%;
+    outline: none;
+    cursor: pointer;
+    padding: 10px;
+}
+
 body{
     margin: 0;
     display: flex;
     justify-content: center;
-    background-color: yellowgreen;
+    background-color: var(--color-base-bg);
 }
 .form{
     position: absolute;
     top: 30%;
     box-shadow: 0 4px 8px rgb(0, 0, 0, .3);
     width: 400px;
-    background-color: yellow;
+    background-color: var(--color-form);
     border-radius: 10px;
 }
 
@@ -23,7 +54,7 @@ body{
 }
 
 input::placeholder{
-    color: lightgray;
+    color: var(--color-);
 }
 .list{
     padding: 0;
@@ -32,12 +63,12 @@ input::placeholder{
 .list li{
     list-style-type: none;
     padding: 20px;
-    border-color: darkgray;
+    border-color: var(--color-b-ul);
     border-top: dotted;
     position: relative;
 }
 .list li .fa-trash{
-    color: red;
+    color: var(--color-btn-trash);
     position: absolute;
     right: 10px;
     top: 50%;
@@ -45,7 +76,7 @@ input::placeholder{
     cursor: pointer;
 }
 .list li .fa-check-square{
-    color: green;
+    color: var(--color-btn-check);
     position: absolute;
     right: 40px;
     top: 50%;
@@ -54,9 +85,9 @@ input::placeholder{
 }
 
 .list li.checked{
-    color: darkgray;
+    color: var(--color-b-ul);
     text-decoration: line-through;
 }
 .list li.checked .fa-check-square{
-    color: darkgray;
+    color: var(--color-b-ul);
 }

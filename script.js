@@ -59,3 +59,11 @@ function updateLocalStorage(){
     })
     localStorage.setItem("list", JSON.stringify(list))
 }
+
+// this function is for the toggle
+function setTheme() {
+    const root = document.documentElement;
+    const newTheme = root.className === 'dark' ? 'light' : 'dark';
+    root.className = newTheme;
+  }
+  document.querySelector('.theme-toggle').addEventListener('click', setTheme)
