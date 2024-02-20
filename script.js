@@ -12,7 +12,7 @@ list.forEach(task=>{
 
 formEl.addEventListener("submit", (event)=>{
     event.preventDefault();
-    toDoList(task);
+    toDoList();
 });
 
 function toDoList(task){
@@ -43,7 +43,7 @@ function toDoList(task){
 
     deleteBtnEl.addEventListener("click", ()=>{
         liEl.remove();
-        updateLocalStorage()
+        updateLocalStorage();
     });
     updateLocalStorage();
 }
